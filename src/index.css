@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+        'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.gamefield {
+    max-width: max-content;
+    padding: 10px;
+    display: flex;
+    padding-right: 48px;
+    flex-direction: column;
+}
+
+.row {
+    padding-right: 40px;
+    display: flex;
+    max-width: max-content;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+}
+
+.cell.active .cell-color {
+    background-color: red;
+}
+
+.cell-color {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.cell-color:hover {
+    background-color: rgba(246, 12, 12, 0.8);
+}
+
+.cell-inner {
+    width: auto;
+    color: rgb(251, 249, 249);
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.gamefield .cell .cell-inner {
+    width: auto;
+    color: rgb(15, 15, 15);
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.5em;
+    cursor: none;
+}
+
+.ui {
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+
+.footer {
+    max-width: max-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.footer .ui .cell {
+    width: 100%;
+    height: 100%;
+}
+.footer .ui .cell .cell-color {
+    background-color: rgb(38, 28, 209);
+}
+
+.button {
+    margin-top: 20px;
+    border-radius: 100px;
+    background-color: #f4511e;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 40px;
+    /* padding: 20px; */
+    min-width: min-content;
+    max-width: max-content;
+    height: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    animation: zoom-in-zoom-out 1.5s ease infinite;
+}
+
+@media all and (max-width: 500px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+    }
+    .gamefield {
+    }
+
+    .button {
+        background-color: #080808;
+    }
+}
